@@ -1,11 +1,15 @@
 import { useDispatch, useSelector } from 'react-redux';
 import { updateField, setErrors, flipCard } from './cardSlice';
 import { validateField, formatCardNumber } from './utilities';
+ 
 
 
 import mobile from "../../assets/card-assets/bg-main-mobile.png"
+import desktop from "../../assets/card-assets/bg-main-desktop.png"
 import cardBack from "../../assets/card-assets/bg-card-back.png"
 import cardFront from "../../assets/card-assets/bg-card-front.png"
+import cardLogo from "../../assets/card-assets/card-logo.svg"
+
 
 
 const CardPayment = () => {
@@ -68,9 +72,10 @@ const CardPayment = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gray-200 md:grid md:grid-cols-2">
+    <div className="min-h-screen bg-gray-200 lg:grid lg:grid-cols-2">
       <div className="relative h-80 ">
-        <img src={mobile} alt="mobile background" className="w-full h-full object-cover sm:hidden" />
+        <img src={mobile} alt="mobile background" className="w-full h-full object-cover lg:hidden" />
+        {/* <img src={desktop} alt="mobile background" className="object-cover hidden lg:flex" /> */}
         
         {/* Cards */}
         <div className="absolute w-full px-4 -bottom-4">
@@ -87,14 +92,15 @@ const CardPayment = () => {
 
           {/* Front Card */}
             
-                    <div className="relative z-0">
+                    <div className="relative z-0 right-4">
             <img src={cardFront} alt="frontCard" className="w-80" />
             <div className="absolute inset-0 p-6 text-white">
+              <img src={cardLogo} alt="card" />
               <div className="mt-8 text-2xl font-bold tracking-wider">
                 {cardNumber || '0000 0000 0000 0000'}
               </div>
-              <div className="mt-4 flex gap-12 justify-start">
-                <div>{cardholderName || 'ISHOLA VICTOR'}</div>
+              <div className="mt-4 flex gap-12 justify-start text-gray-300">
+                <div>{cardholderName || 'AROWOLO VICTOR'}</div>
                 <div>
                   {expiryMonth || '00'}/{expiryYear || '00'}
                 </div>
@@ -115,12 +121,13 @@ const CardPayment = () => {
             <input
               type="text"
               name="cardholderName"
+              maxLength='15'
               value={cardholderName}
               onChange={handleChange}
               className={`mt-1 block w-full px-3 py-2 border ${
                 errors.cardholderName ? 'border-red-500' : 'border-gray-300'
               } rounded-md shadow-sm focus:ring-purple-500 focus:border-purple-500`}
-              placeholder="e.g. Jane Appleseed"
+              placeholder="e.g. Arowolo Victor"
             />
             {errors.cardholderName && (
               <p className="mt-1 text-sm text-red-500">{errors.cardholderName}</p>

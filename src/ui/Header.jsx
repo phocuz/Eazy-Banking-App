@@ -12,7 +12,6 @@ function Header() {
     { path: "/", label: "Home" },
     { path: "/about", label: "About" },
     { path: "/contact", label: "Contact" },
-    { path: "/blog", label: "Blog" },
     { path: "/payments", label: "Payment" }
   ];
 
@@ -27,7 +26,6 @@ function Header() {
                 <Link to="/">Home</Link>
                 <Link to="/about">About</Link>
                 <Link to="/contact">Contact</Link>
-                <Link to="/blog">Blog</Link>
                 <Link to="/payments">Payments</Link>
             </nav>
 

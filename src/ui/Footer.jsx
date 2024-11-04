@@ -17,7 +17,7 @@ function Footer() {
             <img src={logo} alt="EasyBank logo" className="text-white h-6 bg-white px-2 " />
             
             <div className="flex items-center space-x-4">
-              <img src={instagram} alt="Instagram" className="w-6 h-6 hover:text- cursor-pointer transition-opacity" />
+              <img src={instagram} alt="Instagram" className="w-6 h-6 hover:opacity-70 cursor-pointer transition-opacity" />
               <img src={facebook} alt="Facebook" className="w-6 h-6 hover:opacity-70 cursor-pointer transition-opacity" />
               <img src={twitter} alt="Twitter" className="w-6 h-6 hover:opacity-70 cursor-pointer transition-opacity" />
               <img src={youtube} alt="YouTube" className="w-6 h-6 hover:opacity-70 cursor-pointer transition-opacity" />
@@ -29,8 +29,8 @@ function Footer() {
           <nav className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-center md:text-left">
             <div className="space-y-4">
               <a href="#" className="block text-white hover:text-gray-300 transition-colors">About Us</a>
-              <a href="#" className="block text-white hover:text-gray-300 transition-colors">Contact</a>
-              <a href="#" className="block text-white hover:text-gray-300 transition-colors">Blog</a>
+              <Link to="/contact" className="block text-white hover:text-gray-300 transition-colors">Contact</Link>
+              <Link to="/payments" className="block text-white hover:text-gray-300 transition-colors">Payments</Link>
             </div>
             <div className="space-y-4">
               <a href="#" className="block text-white hover:text-gray-300 transition-colors">Careers</a>

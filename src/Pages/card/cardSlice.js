@@ -7,7 +7,7 @@ const initialState = {
   expiryMonth: '',
   expiryYear: '',
   errors: {},
-  isFlipped: false
+ // isFlipped: false
 };
 
 const cardSlice = createSlice({
@@ -20,9 +20,6 @@ const cardSlice = createSlice({
     },
     setErrors: (state, action) => {
       state.errors = action.payload;
-    },
-    flipCard: (state) => {
-      state.isFlipped = !state.isFlipped;
     },
     resetForm: () => initialState
   }

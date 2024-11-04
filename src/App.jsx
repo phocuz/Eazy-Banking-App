@@ -5,6 +5,7 @@ import AppLayout from "./ui/AppLayout";
 //import Loader from "./ui/Loader";
 import Testing from "./ui/Testing";
 import CardPayment from "./Pages/card/CardPayment";
+import ContactForm from "./Pages/contact/ContactForm";
 
 const router = createBrowserRouter([
   {
@@ -19,10 +20,6 @@ const router = createBrowserRouter([
         element: <About />,
       },
       {
-        path: "/contact",
-        element: <About />,
-      },
-      {
         path: "/testing",
         element: <Testing />,
       },
@@ -30,6 +27,10 @@ const router = createBrowserRouter([
         path: "/payments",
         element: <CardPayment />,
       },
+      {
+        path: "/contact",
+        element: <ContactForm />,
+      }
     ],
   },
 ]);
