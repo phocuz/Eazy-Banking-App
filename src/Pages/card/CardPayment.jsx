@@ -100,7 +100,7 @@ const CardPayment = () => {
                 {cardNumber || '0000 0000 0000 0000'}
               </div>
               <div className="mt-4 flex gap-12 justify-start text-gray-300">
-                <div>{cardholderName || 'AROWOLO VICTOR'}</div>
+                <div>{cardholderName || 'OKIKI MARBEL'}</div>
                 <div>
                   {expiryMonth || '00'}/{expiryYear || '00'}
                 </div>
