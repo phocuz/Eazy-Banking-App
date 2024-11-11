@@ -53,7 +53,7 @@ function Header() {
       >
         <nav className="flex flex-col items-center justify-center h-full">
           <div className="space-y-8">
-            {menuItems.map((item, index) => (
+            {menuItems.map((item) => (
               <div
                 key={item.path}
                 // className={`transform transition-all duration-300 ease-in-out ${
